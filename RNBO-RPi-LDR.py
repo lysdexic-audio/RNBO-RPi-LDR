@@ -15,8 +15,11 @@ OSC.send(target, "/rnbo/jack/transport/rolling", 1)
 # read the sensor from GPIO pin 4
 sensor = LightSensor(4)
 
-while True:
-    light_level = sensor.value
-    print(light_level)
-    OSC.send(target, "/rnbo/inst/0/params/cutoff/normalized", light_level)
-    time.sleep(0.01)
+try:
+    while True:
+        light_level = sensor.value
+        print(light_level)
+        OSC.send(target, "/rnbo/inst/0/params/cutoff/normalized", light_level)
+        time.sleep(0.01)
+except  KeyboardInterrupt:
+    print("Exiting cleanly...")
