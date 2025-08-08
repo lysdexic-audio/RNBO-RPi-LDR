@@ -2,7 +2,8 @@
 
 In this article we'll cover how to use some simple sensors with RNBO on the Raspberry Pi target.
 
-> [!warning] The following tutorial is not yet supported on the RPi 5
+> [!WARNING]
+> The following tutorial is not yet supported on the RPi 5
 
 > ⚙️ *Before attempting this tutorial, make sure you're already familiar with the basics of exporting your RNBO patchers to the RPi and that your audio interface is working correctly with it.*
 
